@@ -1,17 +1,14 @@
 n = int(input())
-summa = 0
+summa_a, summa_b = 0, 0
 for i in range (n):
     a, b = map(int, input().split())
-    if a > b:
-        summa += 1
-    elif a < b:
-        summa -= 1
-    else:
-        continue
-if summa > 0:
-    print('Mishka')
-elif summa < 0:
-    print('Chris')
-else:
+    summa_a += a
+    summa_b += b
+if summa_a == summa_b:
     print('Friendship is magic!^^')
+elif summa_a > summa_b:
+    print('Mishka')
+else:
+    print('Chris')
+
 
