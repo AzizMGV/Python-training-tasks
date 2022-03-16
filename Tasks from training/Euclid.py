@@ -8,10 +8,12 @@ while a!=b:
         b-=a
 print(a)
 
-#Solution №2. НОД при помощи нахождения остатка от деления
+#Solution №2. НОД при помощи нахождения остатка от деления и НОК
 
 a, b = map(int,input().split())
+c = a
+d = b
 while b>0:
-    c = a % b
-    a,b = b, c
-print(a)
+    a,b = b, a%b
+print('НОД', a)
+print('НОК', int((c*d)/a))
